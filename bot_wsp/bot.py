@@ -197,7 +197,7 @@ class BotWhatsApp:
             
             return False
 
-    def obtener_todos_los_grupos(self, obtener_participantes:bool = False)->list[dict]:
+    def obtener_todos_los_grupos(self, obtener_participantes:str = "false")->list[dict]:
         try:
             response = requests.get(
                 f"{self.url}/group/fetchAllGroups/{self.instance}",
